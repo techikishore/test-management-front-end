@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
+const API_URL = process.env.REACT_APP_API_URL;
 
 export default function AdminLogin() {
   const [username, setUsername] = useState("");
@@ -14,7 +15,7 @@ export default function AdminLogin() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5001/api/auth/login", {
+      const res = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

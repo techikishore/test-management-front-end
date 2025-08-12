@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Plus, HelpCircle, CheckCircle, AlertCircle, Edit3 } from 'lucide-react';
+const API_URL = process.env.REACT_APP_API_URL;
+
 
 export default function AddQuestion({ testId, onAdded }) {
   const [q, setQ] = useState('');
@@ -54,7 +56,7 @@ export default function AddQuestion({ testId, onAdded }) {
     setMsgType('');
 
     try {
-      await axios.post('http://localhost:5001/api/questions', {
+      await axios.post(`${API_URL}/api/questions`, {
         testId,
         questionText: q.trim(),
         option1: o1.trim(),

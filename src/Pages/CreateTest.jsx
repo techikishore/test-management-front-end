@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Plus, FileText, CheckCircle, AlertCircle } from 'lucide-react';
 import axios from 'axios';
+const API_URL = process.env.REACT_APP_API_URL;
+
 
 export default function CreateTest({ onCreated }) {
   const [title, setTitle] = useState('');
@@ -12,7 +14,7 @@ export default function CreateTest({ onCreated }) {
 
   async function createTest(title, description) {
     try {
-      const response = await axios.post('http://localhost:5001/api/tests', {
+      const response = await axios.post(`${API_URL}/api/tests`, {
         title,
         description,
       });

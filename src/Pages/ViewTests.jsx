@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TestCard from '../Components/TestCard';
+const API_URL = process.env.REACT_APP_API_URL;
+
 
 export default function ViewTests() {
   const [tests, setTests] = useState([]);
@@ -8,7 +10,7 @@ export default function ViewTests() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5001/api/tests')
+    axios.get(`${API_URL}/api/tests`)
       .then(response => {
         setTests(response.data);  
         setLoading(false);
