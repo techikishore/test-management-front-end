@@ -1,0 +1,24 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+:root{
+  --bg: #f5f7fb;
+  --card: #fff;
+  --muted: #666;
+  --accent: #2b6cb0;
+}
+body{ margin:0; font-family: Inter,Arial,Helvetica,sans-serif; background:var(--bg); }
+.nav{ display:flex; justify-content:space-between; align-items:center; padding:12px 20px; background:var(--card); box-shadow:0 1px 2px rgba(0,0,0,0.05) }
+.nav-left{ font-weight:600 }
+.container{ display:flex; gap:20px; padding:20px; }
+.left{ width:360px }
+.right{ flex:1 }
+.card{ background:var(--card); padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.04); margin-bottom:12px }
+.center{ display:flex; align-items:center; justify-content:center; height:80vh }
+input, textarea, select{ width:100%; padding:8px; margin:6px 0; border-radius:6px; border:1px solid #e2e8f0 }
+textarea{ min-height:60px }
+.btn{ background:var(--accent); color:#fff; padding:8px 12px; border:none; border-radius:6px; cursor:pointer }
+.muted{ color:var(--muted); font-size:13px }
+.test-card{ background:#fff; padding:10px; margin-bottom:8px; border-radius:6px }
+.test-summary{ cursor:pointer; font-weight:600 }
+.correct{ margin-top:6px; color: #0f5132 }
